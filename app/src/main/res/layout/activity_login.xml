@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_login_vertical_margin"
+    android:paddingTop="@dimen/activity_login_vertical_margin"
+    android:background="@drawable/side_nav_bar"
+    tools:context="ru.kot_it.goramobile.LoginActivity">
+
+    <!-- Login progress -->
+    <ProgressBar android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout android:id="@+id/gora_login_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <AutoCompleteTextView android:id="@+id/metanim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_metanim"
+                android:textColorHint="@color/textHintColor"
+                android:textStyle="italic"
+                android:inputType="text"
+                android:focusable="true"
+                android:textSize="15sp"
+                android:textColor="@color/textFieldColor"
+                android:nextFocusForward="@+id/username"
+                android:singleLine="true" />
+
+            <AutoCompleteTextView android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:textColorHint="@color/textHintColor"
+                android:textStyle="italic"
+                android:inputType="text"
+                android:textSize="15sp"
+                android:focusable="true"
+                android:textColor="@color/textFieldColor"
+                android:nextFocusForward="@+id/password"
+                android:singleLine="true" />
+
+            <EditText android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:textColorHint="@color/textHintColor"
+                android:textStyle="italic"
+                android:imeActionId="@id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:focusable="true"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:textSize="15sp"
+                android:textColor="@color/textFieldColor"
+                android:singleLine="true" />
+
+            <Button android:id="@+id/gora_sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/textFieldColor"
+                android:text="@string/action_sign_in"
+                android:background="@drawable/button_selector"
+                android:textStyle="bold"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

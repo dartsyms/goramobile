@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/fragment_content_vertical_margin"
+    android:paddingLeft="@dimen/fragment_content_horizontal_margin"
+    android:paddingRight="@dimen/fragment_content_horizontal_margin"
+    android:paddingTop="@dimen/fragment_content_vertical_margin"
+    tools:context="ru.kot_it.goramobile.DocViewFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <WebView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/webview"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            style="?android:attr/webViewStyle" >
+        </WebView>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/webViewProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
