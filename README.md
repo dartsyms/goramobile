@@ -1,1 +1,1 @@
-# A kind of mobile assistant for GORA System.
+# A kind of android mobile assistant for GORA System.
